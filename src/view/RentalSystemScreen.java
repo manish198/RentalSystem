@@ -209,6 +209,7 @@ public class RentalSystemScreen {
                         tenantList = rentalInterface.displayRentPaidStatus(false);
                     }
                     displayTenants(tenantList);
+                    break;
                 }
                 case "11": {
                     System.out.println("Enter tenant ID");
