@@ -2,36 +2,22 @@ package phase_17;
 
 public class Driver {
     public static void main(String[] args) {
-        Set<Identifiable> s = new Set<>();
+        Set<Identifiable> set = new Set<>();
+        set.addElement(new Identifiable(12));
+        set.addElement(new Identifiable(22));
+        set.addElement(new Identifiable(663));
+        set.addElement(new Identifiable(422));
+        set.displayAll();
+        System.out.println("Size: " + set.totalSize());
+        System.out.println("Is 663 in the set? " + set.peek(663));
+        Identifiable removedElement = set.removeElement(422);
+        System.out.println("Removed: " + removedElement);
+        System.out.println("Size: " + set.totalSize());
 
-        // Add elements
-        s.add(new Identifiable(1));
-        s.add(new Identifiable(2));
-        s.add(new Identifiable(3));
-        s.add(new Identifiable(4));
-        s.add(new Identifiable(5));
-
-        // Display elements
-        s.display();
-
-        // Remove an element
-        Identifiable removedElement = s.remove(3);
-        System.out.println("Removed element: " + removedElement);
-
-        // Check if an element is in the set
-        System.out.println("Is 2 in the set? " + s.peek(2));
-        System.out.println("Is 3 in the set? " + s.peek(3));
-
-        // Display the size of the set
-        System.out.println("Size of set: " + s.size());
-
-        // Create another set
-        Set<Identifiable> t = new Set<>();
-        t.add(new Identifiable(1));
-        t.add(new Identifiable(2));
-        t.add(new Identifiable(4));
-
-        // Compare two sets for equality
-        System.out.println("Are s and t equal? " + s.equals(t));
+        Set<Identifiable> secondSet = new Set<>();
+        secondSet.addElement(new Identifiable(12));
+        secondSet.addElement(new Identifiable(22));
+        secondSet.addElement(new Identifiable(663));
+        System.out.println("Are both sets equal? " + set.equals(secondSet));
     }
 }
