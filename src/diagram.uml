@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="1108.0" y="2526.0">controller.TenantController</node>
+    <node x="1030.5" y="1708.0">model.response_model.LeasePropertyResponseObject</node>
+    <node x="717.0" y="2548.0">controller.RentController</node>
+    <node x="400.0" y="1563.0">model.property.concrete_property.House</node>
+    <node x="-83.5" y="980.0">model.address.Address</node>
+    <node x="6.5" y="2148.0">model.factory.PropertyFactory</node>
+    <node x="-14.0" y="1552.0">model.property.concrete_property.ApartmentBuilding</node>
+    <node x="1104.5" y="1037.0">model.property.Property</node>
+    <node x="709.5" y="1541.0">model.property.concrete_property.Condo</node>
+    <node x="149.5" y="870.0">model.property.property_details.PropertyDetails</node>
+    <node x="-86.0" y="2831.0">view.RentalSystemScreen</node>
+    <node x="1514.0" y="2448.0">model.request_model.ApartmentRequest</node>
+    <node x="341.0" y="414.0">model.lease.Lease</node>
+    <node x="1461.0" y="2050.0">interfaces.RentalSystemInterface</node>
+    <node x="321.0" y="2438.0">service.RentalServices</node>
+    <node x="-84.0" y="2526.0">controller.PropertyController</node>
+    <node x="528.0" y="1060.0">interfaces.PropertyDisplay</node>
+    <node x="-116.5" y="-15.0">model.tenant.Tenant</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="model.property.concrete_property.ApartmentBuilding" target="model.property.Property" relationship="GENERALIZATION">
+      <point x="148.79999999999995" y="-195.0" />
+      <point x="330.79999999999995" y="1447.0" />
+      <point x="962.0" y="1447.0" />
+      <point x="962.0" y="1167.0" />
+      <point x="1170.3333333333333" y="1167.0" />
+      <point x="-71.66666666666674" y="50.0" />
+    </edge>
+    <edge source="view.RentalSystemScreen" target="service.RentalServices" relationship="CREATE">
+      <point x="-0.0" y="-116.0" />
+      <point x="102.0" y="2665.5" />
+      <point x="-181.0" y="78.5" />
+    </edge>
+    <edge source="model.property.concrete_property.Condo" target="model.property.property_details.PropertyDetails" relationship="TO_ONE">
+      <point x="-0.0" y="-206.0" />
+      <point x="862.0" y="1504.0" />
+      <point x="221.4" y="1504.0" />
+      <point x="-100.6" y="217.0" />
+    </edge>
+    <edge source="view.RentalSystemScreen" target="controller.PropertyController" relationship="CREATE">
+      <point x="-15.0" y="-116.0" />
+      <point x="-15.0" y="61.0" />
+    </edge>
+    <edge source="model.lease.Lease" target="model.tenant.Tenant" relationship="TO_ONE">
+      <point x="-0.0" y="-173.0" />
+      <point x="502.0" y="361.0" />
+      <point x="2.0" y="361.0" />
+      <point x="-0.0" y="162.0" />
+    </edge>
+    <edge source="model.property.concrete_property.ApartmentBuilding" target="model.property.property_details.PropertyDetails" relationship="TO_MANY">
+      <point x="-0.0" y="-195.0" />
+      <point x="182.0" y="1504.0" />
+      <point x="221.4" y="1504.0" />
+      <point x="-100.6" y="217.0" />
+    </edge>
+    <edge source="model.property.concrete_property.Condo" target="model.property.Property" relationship="GENERALIZATION">
+      <point x="100.0" y="-206.0" />
+      <point x="962.0" y="1167.0" />
+      <point x="1170.3333333333333" y="1167.0" />
+      <point x="-71.66666666666674" y="50.0" />
+    </edge>
+    <edge source="model.property.concrete_property.House" target="model.address.Address" relationship="TO_ONE">
+      <point x="15.0" y="-184.0" />
+      <point x="557.0" y="1531.0" />
+      <point x="465.5" y="1531.0" />
+      <point x="465.5" y="1485.0" />
+      <point x="22.0" y="1485.0" />
+      <point x="-0.0" y="107.0" />
+    </edge>
+    <edge source="service.RentalServices" target="model.response_model.LeasePropertyResponseObject" relationship="CREATE">
+      <point x="-15.0" y="-149.0" />
+      <point x="487.0" y="2002.5" />
+      <point x="1182.0" y="2002.5" />
+      <point x="-0.0" y="39.0" />
+    </edge>
+    <edge source="service.RentalServices" target="model.tenant.Tenant" relationship="TO_MANY">
+      <point x="-181.0" y="-78.5" />
+      <point x="-103.5" y="2508.5" />
+      <point x="-103.5" y="361.0" />
+      <point x="2.0" y="361.0" />
+      <point x="-0.0" y="162.0" />
+    </edge>
+    <edge source="service.RentalServices" target="model.factory.PropertyFactory" relationship="CREATE">
+      <point x="-173.5" y="-149.0" />
+      <point x="146.5" y="39.0" />
+    </edge>
+    <edge source="model.property.concrete_property.House" target="model.property.property_details.PropertyDetails" relationship="TO_ONE">
+      <point x="-0.0" y="-184.0" />
+      <point x="542.0" y="1504.0" />
+      <point x="221.4" y="1504.0" />
+      <point x="-100.6" y="217.0" />
+    </edge>
+    <edge source="model.property.concrete_property.House" target="interfaces.PropertyDisplay" relationship="REALIZATION">
+      <point x="80.0" y="-184.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="model.factory.PropertyFactory" target="model.property.concrete_property.ApartmentBuilding" relationship="CREATE">
+      <point x="-15.0" y="-39.0" />
+      <point x="-15.0" y="195.0" />
+    </edge>
+    <edge source="service.RentalServices" target="model.lease.Lease" relationship="CREATE">
+      <point x="15.0" y="-149.0" />
+      <point x="517.0" y="2130.5" />
+      <point x="1397.0" y="2130.5" />
+      <point x="1397.0" y="572.0" />
+      <point x="161.0" y="-15.0" />
+    </edge>
+    <edge source="view.RentalSystemScreen" target="model.request_model.ApartmentRequest" relationship="CREATE">
+      <point x="188.0" y="-0.0" />
+      <point x="1662.0" y="2947.0" />
+      <point x="-0.0" y="139.0" />
+    </edge>
+    <edge source="model.response_model.LeasePropertyResponseObject" target="model.property.Property" relationship="TO_ONE">
+      <point x="151.5" y="-0.0" />
+      <point x="1380.0" y="1747.0" />
+      <point x="1380.0" y="1167.0" />
+      <point x="1242.0" y="1167.0" />
+      <point x="-0.0" y="50.0" />
+    </edge>
+    <edge source="model.factory.PropertyFactory" target="model.address.Address" relationship="CREATE">
+      <point x="-175.5" y="15.0" />
+      <point x="-46.5" y="2202.0" />
+      <point x="-68.5" y="107.0" />
+    </edge>
+    <edge source="model.property.concrete_property.ApartmentBuilding" target="model.property.property_details.PropertyDetails" relationship="CREATE">
+      <point x="-62.0" y="-195.0" />
+      <point x="120.0" y="1504.0" />
+      <point x="85.0" y="1504.0" />
+      <point x="85.0" y="1296.5" />
+      <point x="-172.5" y="209.5" />
+    </edge>
+    <edge source="model.property.concrete_property.Condo" target="interfaces.PropertyDisplay" relationship="REALIZATION">
+      <point x="-20.0" y="-206.0" />
+      <point x="842.0" y="1467.0" />
+      <point x="622.0" y="1467.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="model.property.concrete_property.ApartmentBuilding" target="model.address.Address" relationship="TO_ONE">
+      <point x="108.0" y="-195.0" />
+      <point x="290.0" y="1531.0" />
+      <point x="465.5" y="1531.0" />
+      <point x="465.5" y="1485.0" />
+      <point x="22.0" y="1485.0" />
+      <point x="-0.0" y="107.0" />
+    </edge>
+    <edge source="model.property.property_details.PropertyDetails" target="model.lease.Lease" relationship="TO_ONE">
+      <point x="-0.0" y="217.0" />
+      <point x="322.0" y="1375.0" />
+      <point x="741.5" y="1375.0" />
+      <point x="741.5" y="587.0" />
+      <point x="161.0" y="-0.0" />
+    </edge>
+    <edge source="model.factory.PropertyFactory" target="model.property.concrete_property.Condo" relationship="CREATE">
+      <point x="-0.0" y="-39.0" />
+      <point x="182.0" y="1972.5" />
+      <point x="862.0" y="1972.5" />
+      <point x="-0.0" y="206.0" />
+    </edge>
+    <edge source="model.property.concrete_property.House" target="model.property.Property" relationship="GENERALIZATION">
+      <point x="121.33333333333337" y="-184.0" />
+      <point x="663.3333333333334" y="1447.0" />
+      <point x="962.0" y="1447.0" />
+      <point x="962.0" y="1167.0" />
+      <point x="1170.3333333333333" y="1167.0" />
+      <point x="-71.66666666666674" y="50.0" />
+    </edge>
+    <edge source="service.RentalServices" target="model.tenant.Tenant" relationship="CREATE">
+      <point x="-181.0" y="-93.5" />
+      <point x="-134.0" y="2493.5" />
+      <point x="-134.0" y="147.0" />
+      <point x="-118.5" y="-0.0" />
+    </edge>
+    <edge source="model.property.concrete_property.ApartmentBuilding" target="interfaces.PropertyDisplay" relationship="REALIZATION">
+      <point x="54.39999999999998" y="-195.0" />
+      <point x="236.39999999999998" y="1467.0" />
+      <point x="622.0" y="1467.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="service.RentalServices" target="model.property.Property" relationship="TO_MANY">
+      <point x="181.0" y="-83.5" />
+      <point x="1380.0" y="2503.5" />
+      <point x="1380.0" y="1167.0" />
+      <point x="1242.0" y="1167.0" />
+      <point x="-0.0" y="50.0" />
+    </edge>
+    <edge source="view.RentalSystemScreen" target="controller.RentController" relationship="CREATE">
+      <point x="188.0" y="-30.0" />
+      <point x="902.0" y="2917.0" />
+      <point x="-0.0" y="39.0" />
+    </edge>
+    <edge source="model.property.concrete_property.Condo" target="model.address.Address" relationship="TO_ONE">
+      <point x="15.0" y="-206.0" />
+      <point x="877.0" y="1485.0" />
+      <point x="22.0" y="1485.0" />
+      <point x="-0.0" y="107.0" />
+    </edge>
+    <edge source="model.factory.PropertyFactory" target="model.property.concrete_property.House" relationship="CREATE">
+      <point x="175.5" y="-0.0" />
+      <point x="472.0" y="2187.0" />
+      <point x="-70.0" y="184.0" />
+    </edge>
+    <edge source="model.property.property_details.PropertyDetails" target="model.tenant.Tenant" relationship="TO_MANY">
+      <point x="-0.0" y="-217.0" />
+      <point x="322.0" y="361.0" />
+      <point x="2.0" y="361.0" />
+      <point x="-0.0" y="162.0" />
+    </edge>
+    <edge source="model.response_model.LeasePropertyResponseObject" target="model.lease.Lease" relationship="TO_ONE">
+      <point x="-0.0" y="-39.0" />
+      <point x="1182.0" y="1375.0" />
+      <point x="741.5" y="1375.0" />
+      <point x="741.5" y="587.0" />
+      <point x="161.0" y="-0.0" />
+    </edge>
+    <edge source="service.RentalServices" target="model.lease.Lease" relationship="TO_MANY">
+      <point x="-0.0" y="-149.0" />
+      <point x="502.0" y="2100.5" />
+      <point x="1351.0" y="2100.5" />
+      <point x="1351.0" y="1375.0" />
+      <point x="741.5" y="1375.0" />
+      <point x="741.5" y="587.0" />
+      <point x="161.0" y="-0.0" />
+    </edge>
+    <edge source="view.RentalSystemScreen" target="controller.TenantController" relationship="CREATE">
+      <point x="188.0" y="-15.0" />
+      <point x="1302.0" y="2932.0" />
+      <point x="-0.0" y="61.0" />
+    </edge>
+    <edge source="service.RentalServices" target="interfaces.RentalSystemInterface" relationship="REALIZATION">
+      <point x="120.66666666666666" y="-149.0" />
+      <point x="622.6666666666666" y="2347.0" />
+      <point x="1482.0" y="2347.0" />
+      <point x="-160.0" y="137.0" />
+    </edge>
+    <edge source="model.factory.PropertyFactory" target="model.property.property_details.PropertyDetails" relationship="CREATE">
+      <point x="-175.5" y="-0.0" />
+      <point x="-31.5" y="2187.0" />
+      <point x="-31.5" y="1500.0" />
+      <point x="85.0" y="1500.0" />
+      <point x="85.0" y="1296.5" />
+      <point x="-172.5" y="209.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.16036152356358943" showDependencies="true" x="794.4834943639294" y="1631.9037842190012" />
+  <SelectedNodes>
+    <node>view.RentalSystemScreen</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

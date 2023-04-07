@@ -69,6 +69,9 @@ class ApartmentBuildingTest {
         assertEquals(civicaddress,ap.getCivicAddress());
     }
 
+
+
+
     @Test
     void addProperty() {
     }

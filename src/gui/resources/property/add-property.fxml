@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleGroup?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="526.0" prefWidth="735.0" stylesheets="@../../css/home-screen.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.property.AddPropertyController">
    <children>
@@ -58,6 +53,11 @@
          </children>
       </Pane>
       <Hyperlink layoutX="14.0" layoutY="14.0" onAction="#onHomeClicked" text="Home" />
+      <AmbientLight lightOn="true">
+         <color>
+            <Color red="0.1400584727525711" green="0.15789473056793213" blue="0.12222222238779068" />
+         </color>
+      </AmbientLight>
 <!--      <Button layoutX="212.0" layoutY="200.0" mnemonicParsing="false" onAction="#onHomeButton" text="Go to home screen" />-->
    </children>
 </AnchorPane>

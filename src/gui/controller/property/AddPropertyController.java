@@ -1,5 +1,6 @@
 package gui.controller.property;
 
+import gui.MusicButton;
 import gui.constants.Constant;
 import gui.utils.SwitchScene;
 import javafx.event.ActionEvent;
@@ -8,15 +9,24 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import model.request_model.ApartmentRequest;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class AddPropertyController extends SwitchScene {
+    MediaPlayer mediaPlayer;
+    Media musicplay = new Media("File:///C:/Users/yashb/IdeaProjects/RentalSystem/src/Music/cb.mp3");
+
+
+
+
+    String type;
     int totalUnits = 0;
     ArrayList<model.request_model.ApartmentRequest> apartmentList = new ArrayList();
-    String type = "APARTMENT";
+//    String type = "APARTMENT";
     @FXML
     TextField unitNumber;
     @FXML
@@ -64,9 +74,13 @@ public class AddPropertyController extends SwitchScene {
 
     @FXML
     public void onHomeClicked(ActionEvent event) throws IOException {
+        this.mediaPlayer = new MediaPlayer(musicplay);
+        this.mediaPlayer.setAutoPlay(true);
         screenSwitch(Constant.HOME_SCREEN, event);
     }
     public void onHouseCheckClicked() {
+        this.mediaPlayer = new MediaPlayer(musicplay);
+        this.mediaPlayer.setAutoPlay(true);
         unitNumber.setVisible(false);
         propertyID.setVisible(true);
         streetName.setVisible(true);
@@ -87,6 +101,8 @@ public class AddPropertyController extends SwitchScene {
         type = "HOUSE";
     }
     public void onApartmentCheckClicked() {
+        this.mediaPlayer = new MediaPlayer(musicplay);
+        this.mediaPlayer.setAutoPlay(true);
         unitNumber.setVisible(false);
         propertyID.setVisible(false);
         streetName.setVisible(false);
@@ -103,6 +119,8 @@ public class AddPropertyController extends SwitchScene {
         type = "APARTMENT";
     }
     public void onCondoCheckClicked() {
+        this.mediaPlayer = new MediaPlayer(musicplay);
+        this.mediaPlayer.setAutoPlay(true);
         unitNumber.setVisible(true);
         propertyID.setVisible(true);
         streetName.setVisible(true);
@@ -151,6 +169,9 @@ public class AddPropertyController extends SwitchScene {
     }
 
     public void submit(ActionEvent event) throws InterruptedException, IOException {
+        this.mediaPlayer = new MediaPlayer(musicplay);
+        this.mediaPlayer.setAutoPlay(true);
+
         String res = "";
         if(type.equals("HOUSE")){
             res = Constant.api.addHouse(type, propertyID.getText(), streetName.getText(), Integer.parseInt(streetNumber.getText()),

@@ -9,6 +9,7 @@ module RentalSystem {
     requires javafx.graphics;
     requires javafx.fxml;
     requires javafx.controls;
+    requires javafx.media;
     exports gui.config;
     exports gui.controller;
     opens gui.config to javafx.fxml;

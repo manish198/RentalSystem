@@ -24,5 +24,16 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Downloads/jar_files/javafx-media-19-ea+10-loongson64.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="jar://$USER_HOME$/Downloads/jar_files/javafx-media-19-ea+10-loongson64.jar!/" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>

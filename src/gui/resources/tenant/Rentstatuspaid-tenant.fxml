@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="526.0" prefWidth="735.0" stylesheets="@../../css/home-screen.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.tenant.CheckRentStatusPaidController">
+    <children>
+        <ImageView fitHeight="526.0" fitWidth="743.0" layoutX="-8.0" pickOnBounds="true">
+            <image>
+                <Image url="@../../assets/082fbeaf4e8047c886e660a26508ef4b-cc_ft_960.jpg" />
+            </image>
+        </ImageView>
+        <Pane layoutX="85.0" layoutY="14.0" prefHeight="480.0" prefWidth="565.0" style="-fx-background-radius: 50; -fx-background-color: rgba(38, 50, 87,0.88);">
+            <children>
+                <Label layoutX="36.0" layoutY="28.0" style="-fx-font-weight: 700; -fx-font-family: Arial Rounded MT Bold;" stylesheets="@../../css/home-screen.css" text="Display Properties" textFill="WHITE">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </Label>
+                <Label layoutX="36.0" layoutY="82.0" stylesheets="@../../css/home-screen.css" text="List of Tenants (Rent paid)-" textFill="WHITE" />
+                <ListView fx:id="outputListView" layoutX="36.0" layoutY="127.0" prefHeight="300.0" prefWidth="490.0" />
+            </children>
+        </Pane>
+        <Hyperlink layoutX="14.0" layoutY="14.0" onAction="#onHomeClicked" text="Home" />
+    </children>
+</AnchorPane>
