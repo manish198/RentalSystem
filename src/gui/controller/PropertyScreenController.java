@@ -38,11 +38,9 @@ public class PropertyScreenController extends SwitchScene {
         };
 
         Thread thread = new Thread(runnable);
-        System.out.println("I am here");
         thread.start();
     }
     public void executeOnDisplayPropertyButton(ActionEvent event) throws IOException {
-        System.out.println("Hello");
         FXMLLoader loader = new FXMLLoader(getClass().getResource(Constant.DISPLAY_PROPERTY));
         root = loader.load();
 
